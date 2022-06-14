@@ -1,4 +1,4 @@
-# from typing import List
+from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
@@ -6,5 +6,5 @@ class Solution:
             return False
         return True
 
-# sol = Solution()
-# print(sol.containsDuplicate([1, 3, 1, 2]))
+sol = Solution()
+print(sol.containsDuplicate([1, 3, 1, 2]))

@@ -5,7 +5,7 @@ from typing import List
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
 
-        # Create sets for each element in the rows, columns, and sub-boxes
+        # Create 9 sets for each element in the rows, columns, and sub-boxes
         rows = [set() for x in range(9)]
         cols = [set() for x in range(9)]
         boxes = [set() for x in range(9)]

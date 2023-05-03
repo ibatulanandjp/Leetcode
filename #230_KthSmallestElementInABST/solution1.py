@@ -8,7 +8,7 @@ class TreeNode:
         self.right = right
 
 
-# Method: BFS - Inorder (Recursive)
+# Method: DFS - Inorder (Recursive)
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         nodes = []

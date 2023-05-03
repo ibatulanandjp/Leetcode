@@ -13,17 +13,17 @@ class TreeNode:
 # SC: O(n)
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        in_order_list = []
+        inorder_list = []
 
         def dfs(root):
             if not root:
                 return
             dfs(root.left)
-            in_order_list.append(root.val)
+            inorder_list.append(root.val)
             dfs(root.right)
 
         dfs(root)
-        return in_order_list
+        return inorder_list
 
 n1 = TreeNode(1)
 n2 = TreeNode(2)

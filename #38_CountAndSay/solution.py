@@ -1,17 +1,18 @@
 from typing import List
 
-
+# Method: Recursively convert the integer to charCountString using helper functions
 class Solution:
     def countAndSay(self, n: int) -> str:
         if n == 1:
             return "1"
 
         say = self.countAndSay(n-1)
-        l = self.convertCharCountMap(say)
-        s = self.convertCharCountString(l)
+        l = self.convertToCharCountList(say)
+        s = self.convertToCharCountString(l)
         return s
 
-    def convertCharCountMap(self, s: str) -> List[List[int]]:
+    # Function to convert integer to charCountList
+    def convertToCharCountList(self, s: str) -> List[List[int]]:
         charCountList = []
         i = 0
         while i < len(s):
@@ -25,9 +26,10 @@ class Solution:
 
         return charCountList
 
-    def convertCharCountString(self, charCountMap: List[List[int]]) -> str:
+    # Function to convert charCountList to charCountString
+    def convertToCharCountString(self, charCountList: List[List[int]]) -> str:
         charCountString = ""
-        for i in charCountMap:
+        for i in charCountList:
             for j in i:
                 charCountString += str(j)
 

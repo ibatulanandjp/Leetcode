@@ -12,24 +12,23 @@ class Node:
         self.next = next
 
 
+# Method: BFS
+# Handle 2 cases: 
+#   1) if node has left and right, then: node.left.next --> node.right
+#   2) If node has next, then: node.right.next --> node.next.left
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+        queue = deque([root] if root else [])
 
-        if not root:
-            return None
-        queue = deque([root])
-
-        while queue:
-
+        while queue:      
             node = queue.popleft()
-
+            # Case 1
             if node.left and node.right:
-
                 node.left.next = node.right
+                # Case 2
                 if node.next:
                     node.right.next = node.next.left
-
+                            
                 queue.append(node.left)
                 queue.append(node.right)
-
         return root

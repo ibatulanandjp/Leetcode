@@ -1,7 +1,3 @@
-'''
-Recursive solution for Inorder traversal
-'''
-
 from typing import List, Optional
 
 
@@ -11,19 +7,23 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
+# Recursive solution for Inorder traversal (left-Root-right)
+# TC: O(n)
+# SC: O(n)
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        in_order_list = []
 
         def dfs(root):
-            if root:
-                dfs(root.left)
-                in_order_list.append(root.val)
-                dfs(root.right)
+            if not root:
+                return
+            dfs(root.left)
+            in_order_list.append(root.val)
+            dfs(root.right)
 
-        in_order_list = []
         dfs(root)
         return in_order_list
-
 
 n1 = TreeNode(1)
 n2 = TreeNode(2)

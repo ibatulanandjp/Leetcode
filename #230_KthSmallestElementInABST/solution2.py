@@ -8,22 +8,28 @@ class TreeNode:
         self.right = right
 
 
+# Method: BFS - Iterative (Inorder Traversal)
+# Return when the Kth element is found in the Inorder traversal
+# TC: O(n)
+# SC: O(n)
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        if not root:
-            return None
+        # To keep track of the Kth smallest element
+        n = 0
         stack = []
+        current = root
 
-        while True:
-            while root:
-                stack.append(root)
-                root = root.left
+        while current or stack:
+            # [left]
+            while current:
+                stack.append(current)
+                current = current.left
 
-            root = stack.pop()
+            # [Root]
+            current = stack.pop()
+            n += 1
+            if n == k:
+                return current.val
 
-            # Decrement k to reach the Kth smallest element
-            k -= 1
-            if k == 0:
-                return root.val
-
-            root = root.right
+            # [right]
+            current = current.right

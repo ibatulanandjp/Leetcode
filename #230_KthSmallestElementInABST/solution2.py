@@ -8,7 +8,7 @@ class TreeNode:
         self.right = right
 
 
-# Method: BFS - Iterative (Inorder Traversal)
+# Method: DFS - Iterative (Inorder Traversal)
 # Return when the Kth element is found in the Inorder traversal
 # TC: O(n)
 # SC: O(n)

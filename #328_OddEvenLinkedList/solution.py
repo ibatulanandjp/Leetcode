@@ -30,6 +30,7 @@ class Solution:
             even.next = odd.next
             even = even.next
 
+        # Add the evenList to the end of oddList
         odd.next = evenStart
 
         return head

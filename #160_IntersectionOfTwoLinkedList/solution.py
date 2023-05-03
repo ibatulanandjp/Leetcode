@@ -1,14 +1,17 @@
 from typing import Optional
 
+
 # Definition for singly-linked list.
-
-
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
+# Method: Calculate difference between the length of lists and move the head of the longer list with the difference
+# Then traverse both the lists simultaneously and return the node which is same/equal in both the lists
+# TC: O(m+n)
+# SC: O(1)
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
 
@@ -26,7 +29,7 @@ class Solution:
             for i in range(diff):
                 headB = headB.next
 
-        # Traverse the whole list from there
+        # Traverse the whole list (both) from there
         while headA or headB:
             if headA == headB:
                 return headA
@@ -35,6 +38,7 @@ class Solution:
 
         return None
 
+    # Function to get the length of list
     def getListLength(self, head: ListNode) -> int:
         count = 0
         temp = head

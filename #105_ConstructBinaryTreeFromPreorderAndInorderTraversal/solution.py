@@ -17,6 +17,7 @@ class Solution:
         if not preorder or not inorder:
             return None
 
+        # Create the "root" node of the subtree from preorder[0]
         root = TreeNode(preorder[0])
         # Get the middle index from the inorder list
         mid = inorder.index(preorder[0])

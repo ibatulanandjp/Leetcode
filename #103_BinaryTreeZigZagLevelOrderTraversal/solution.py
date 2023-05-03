@@ -1,8 +1,6 @@
 from collections import deque
 from typing import List, Optional
 
-# Definition for a binary tree node.
-
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -11,17 +9,19 @@ class TreeNode:
         self.right = right
 
 
+# Method: Implement BFS using Queue (Level order traversal) 
+# And change the direction at alternate level (Reverse)
+# TC: O(n)
+# SC: O(n)
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-
-        if not root:
-            return []
-
-        queue = deque([root])
+        # Initialize queue with [root] if it exists
+        queue = deque([root] if root else [])
         zigzag_level_order = []
         direction = 1
 
         while queue:
+            # List of each level elements
             level = []
             for i in range(len(queue)):
                 node = queue.popleft()
@@ -32,6 +32,7 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
 
+            # Reverse the level list alternately
             zigzag_level_order.append(level[::direction])
             direction *= (-1)
 

@@ -14,7 +14,7 @@ class TreeNode:
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 
-        in_order_list = []
+        inorder_list = []
         stack = []
         current = root
 
@@ -26,11 +26,11 @@ class Solution:
 
             # [Root] Pop and append to the result
             current = stack.pop()
-            in_order_list.append(current.val)
+            inorder_list.append(current.val)
 
             # [right] Move right
             current = current.right
-        return in_order_list
+        return inorder_list
 
 n1 = TreeNode(1)
 n2 = TreeNode(2)

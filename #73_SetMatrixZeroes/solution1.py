@@ -1,6 +1,7 @@
 from typing import List
 
-
+# TC: O(m*n)
+# SC: O(m+n)
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """

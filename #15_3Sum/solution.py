@@ -23,7 +23,7 @@ class Solution:
                     if triplet not in res:
                         res.append(triplet)
                 
-                # Add the 3rd num "value: index" to the map
+                # Add the current num (2nd num) "value: index" to the map
                 seen_map[nums[j]] = j
                         
         return res

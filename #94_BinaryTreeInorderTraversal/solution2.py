@@ -1,7 +1,3 @@
-'''
-Iterative solution for Inorder traversal
-'''
-
 from typing import List, Optional
 
 
@@ -11,30 +7,29 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
+# Iterative solution for Inorder traversal (left-Root-right)
+# TC: O(n)
+# SC: O(n)
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 
         in_order_list = []
         stack = []
+        current = root
 
-        while 1:
+        while current or stack:
+            # [left] Push to the stack and keep moving to the left till current is None
+            while current:
+                stack.append(current)
+                current = current.left
 
-            # Push all the root left node to the stack
-            while root:
-                stack.append(root)
-                root = root.left
+            # [Root] Pop and append to the result
+            current = stack.pop()
+            in_order_list.append(current.val)
 
-            # Base condition (If stack is empty)
-            if not stack:
-                break
-
-            # Pop and append the root (current) node to the inorder list
-            root = stack.pop()
-            in_order_list.append(root.val)
-
-            # Move to the right nodes
-            root = root.right
-
+            # [right] Move right
+            current = current.right
         return in_order_list
 
 n1 = TreeNode(1)

@@ -1,6 +1,7 @@
 from typing import List
 
 
+# Method: Backtrack (Iterative) using stack
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 

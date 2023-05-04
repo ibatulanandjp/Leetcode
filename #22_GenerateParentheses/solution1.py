@@ -1,6 +1,12 @@
 from typing import List
 
 
+# Method: Backtrack Iterative
+# Store ["parentheses_string", open_count, close_count] on stack
+# 1: If open_count==n and close_count==n, then append the parantheses_string to RESULT
+# 2: If close_count<=open_count, 
+#       a. if open_count<n, add parantheses_string+"(" to STACK
+#       b. if close_count<n, add parantheses_string+")" to STACK
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         

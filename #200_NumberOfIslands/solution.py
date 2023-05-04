@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        
-        rows, cols = len(grid), len(grid[0])
+        ROWS, COLS = len(grid), len(grid[0])
         visited = set()
         islands = 0
         
+        # BFS Function
         def bfs(r, c):
             queue = deque()
             visited.add((r, c))
@@ -18,7 +18,6 @@ class Solution:
             
             # Until queue is not empty
             while queue:
-                
                 # Pop 1 tuple from the set
                 r, c = queue.popleft()
                 
@@ -28,17 +27,17 @@ class Solution:
                     col = c + dc
                     
                     # If row and col are in range, is island, and is not visited
-                    if (row in range(rows) and
-                        col in range(cols) and
+                    if (row in range(ROWS) and
+                        col in range(COLS) and
                         grid[row][col] == "1" and
                         (row, col) not in visited):
                         # Mark visited and push into the queue 
                         visited.add((row, col))
                         queue.append((row, col))
                     
-            
-        for r in range(rows):
-            for c in range(cols):
+        # Core part     
+        for r in range(ROWS):
+            for c in range(COLS):
                 # If current position is an island and is not visited already
                 if grid[r][c]=="1" and (r, c) not in visited:
                     bfs(r, c)

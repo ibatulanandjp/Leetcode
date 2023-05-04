@@ -1,6 +1,13 @@
 from typing import List
 
 
+# Method: Dynamic Programming
+# Maintain a list of max jump from each index
+# Also keep a "max index" which can be reached
+# Return True, if the max index exceeds the length of the list
+# Return False, if the max index is smaller than current index
+# TC: O(n)
+# SC: O(n)
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         

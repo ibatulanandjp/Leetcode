@@ -1,9 +1,9 @@
 from typing import List
 
 
+# Method: Backtracking (Iterative) Top-to-bottom
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        
         stack = []
         permutation = []
         
@@ -12,9 +12,9 @@ class Solution:
             stack.append([i])
         
         while stack:
-            
             curr_nums = stack.pop()
             
+            # Base Case
             if len(curr_nums) == len(nums):
                 permutation.append(curr_nums)
                 

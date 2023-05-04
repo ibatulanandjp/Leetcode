@@ -16,7 +16,7 @@ class Solution:
         def backtrack(open_count, close_count):
             
             # Base case: open_count == close_count == n
-            if open_count == n and close_count == n:
+            if open_count == close_count == n:
                 result.append("".join(stack))
                 return
             

@@ -2,7 +2,7 @@ from typing import List
 
 
 # Method: Dynamic Programming
-# Go from right to left, caching the max LIS for each element
+# Go from right to left, and for each element, compare with all the right elements, caching the max LIS for each element
 # TC: O(n*logn)
 # SC: O(n)
 class Solution:

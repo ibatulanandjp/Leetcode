@@ -1,6 +1,9 @@
 from typing import List
 
 
+# Method: Two-Pass algorithm using Counting Sort
+# TC: O(n)
+# SC: O(1)
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
@@ -9,7 +12,8 @@ class Solution:
         red = 0
         white = 0
         blue = 0
-        
+
+        # Pass1: Count all red, white and blue colors
         for i in range(len(nums)):
             if nums[i] == 0:
                 red += 1
@@ -18,9 +22,10 @@ class Solution:
             else:
                 blue += 1
 
+        # Pass2: Append all the 0s, 1s and 2s each for the count of red, white and blue colors
         for i in range(red):
-            nums[i]=0
+            nums[i] = 0
         for i in range(red, red+white):
-            nums[i]=1
+            nums[i] = 1
         for i in range(red+white, len(nums)):
-            nums[i]=2
+            nums[i] = 2

@@ -1,6 +1,10 @@
 from typing import List
 
 
+# Method: One-Pass
+# Keep 3 pointers for each color, move along the list moving "red" to the left and "blue" to the right
+# TC: O(n)
+# SC: O(1)
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """

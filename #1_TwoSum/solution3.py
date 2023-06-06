@@ -1,4 +1,5 @@
-# Different version of solution2
+# TC: O(n)
+# SC: O(n)
 from typing import List
 
 

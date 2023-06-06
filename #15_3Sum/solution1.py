@@ -1,6 +1,10 @@
 from typing import List
 
 
+# Method: Sort, and use hashmap/dict to solve TwoSum problem
+# NOTE: In some cases, this solution results in "Time Limit Exceeded" --> Use solution2.py
+# TC: O(n^2)
+# SC: O(n)
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []

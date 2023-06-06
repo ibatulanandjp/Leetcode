@@ -1,3 +1,6 @@
+# Method: Brute-force (Naive)
+# TC: O(nlogn)
+# SC: O(1) -> O(n), in case the sort() function uses O(n) space
 from typing import List
 
 

@@ -17,7 +17,7 @@ class Solution:
 
         return res
 
-    def expandAroundCenter(self, s: str, left: int, right: int) -> int:
+    def expandAroundCenter(self, s: str, left: int, right: int) -> str:
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1
             right += 1

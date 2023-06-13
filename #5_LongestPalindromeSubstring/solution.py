@@ -1,3 +1,6 @@
+# Method: Expand around centre (Both odd & even length)
+# TC: O(n^2)
+# SC: O(1)
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         res = ""

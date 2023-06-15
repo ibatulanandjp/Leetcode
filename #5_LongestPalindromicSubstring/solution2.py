@@ -19,7 +19,7 @@ class Solution:
                     dp[i][j] = 1
 
                     # Update res
-                    if len(res) < len(s[i:j+1]):
+                    if len(s[i:j+1]) > len(res):
                         res = s[i:j+1]
 
         return res

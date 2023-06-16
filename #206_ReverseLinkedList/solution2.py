@@ -10,16 +10,18 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        return self._reverse(head, None)
+        return self.reverse(head, None)
 
-    def _reverse(self, head, prev):
+    def reverse(self, head, prev):
         if not head:
             return prev
         temp = head.next
         head.next = prev
-        return self._reverse(temp, head)
+        return self.reverse(temp, head)
+
 
 n1 = ListNode(1)
 n2 = ListNode(2)

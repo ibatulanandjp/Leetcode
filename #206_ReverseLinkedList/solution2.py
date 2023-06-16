@@ -19,7 +19,7 @@ class Solution:
             return prev
         temp = head.next
         head.next = prev
-        return self._reverse(temp, prev)
+        return self._reverse(temp, head)
 
 n1 = ListNode(1)
 n2 = ListNode(2)

@@ -1,3 +1,6 @@
+# Method: BFS: Create wordList set and create all charset; then queue the beginWord and check each word by replacing 1 char at a time, if it exist in wordList
+# TC: O(m*n + 26*n) = O(m*n), where m=Length of longest word, n=No. of words in the list
+# SC: O(m)
 from collections import deque
 
 
@@ -9,7 +12,7 @@ class Solution:
         queue = deque([[beginWord, 1]])
 
         # Create a set of characters present in the wordList
-        char_set = {w for word in wordList for w in word}
+        charSet = {ch for word in wordList for ch in word}
 
         while queue:
             # Pop the first element from the queue
@@ -22,13 +25,13 @@ class Solution:
             # Iterate for the length of word
             for i in range(len(word)):
                 # Iterate over characters in the character set of wordList
-                for c in char_set:
+                for c in charSet:
 
-                    # Create possible words, and check if the new_word is in the wordList
-                    new_word = word[:i] + c + word[i+1:]
-                    if new_word in wordList:
-                        # Remove the new_word from wordList and add it to the queue with length+1
-                        wordList.remove(new_word)
-                        queue.append([new_word, length+1])
+                    # Create possible words, and check if the newWord is in the wordList
+                    newWord = word[:i] + c + word[i+1:]
+                    if newWord in wordList:
+                        # Remove the newWord from wordList and add it to the queue with length+1
+                        wordList.remove(newWord)
+                        queue.append([newWord, length+1])
 
         return 0

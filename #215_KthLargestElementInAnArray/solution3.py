@@ -1,7 +1,7 @@
 # Method: Using Quick find method (A method similar to Quick sort)
 # Gives better Average Case time complexity
 # TC: Average: O(n), Worst: O(n^2)
-# SC: O(1)
+# SC: Average: O(logn), Worst: O(n) 
 from typing import List
 
 class Solution:

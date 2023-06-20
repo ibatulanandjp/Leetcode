@@ -1,3 +1,6 @@
+# Method: Use BFS to traverse the graph and mark nodes in Visited set; Increment the number of islands when conditions satisfy
+# TC: O(n*m)
+# SC: O(n*m)
 from collections import deque
 from typing import List
 

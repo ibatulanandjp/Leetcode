@@ -16,20 +16,18 @@ class Solution:
         stack.append(["(", 1, 0])
 
         while stack:
-            element = stack.pop()
+            s, open_count, close_count = stack.pop()
 
             # If the "(" and ")" count has already reached the max (i.e, "n"), add that to result list
-            if element[1] == n and element[2] == n:
-                parenthesis_combinations.append(element[0])
+            if open_count == n and close_count == n:
+                parenthesis_combinations.append(s)
 
             # If open_count < max, add "(" and increment open_count
-            if element[1] < n:
-                new_element = [(element[0] + "("), element[1]+1, element[2]]
-                stack.append(new_element)
+            if open_count < n:
+                stack.append([s+"(", open_count+1, close_count])
 
             # If close_count < open_count, add ")" and increment close_count
-            if element[2] < element[1]:
-                new_element = [(element[0] + ")"), element[1], element[2]+1]
-                stack.append(new_element)
+            if close_count < open_count:
+                stack.append([s+")", open_count, close_count+1])
 
         return parenthesis_combinations

@@ -25,15 +25,15 @@ class Solution:
             level = []
             for i in range(len(queue)):
                 node = queue.popleft()
-                level.append(node.val)
-
-                if node.left:
+                
+                if node:
+                    level.append(node.val)
                     queue.append(node.left)
-                if node.right:
                     queue.append(node.right)
 
             # Reverse the level list alternately
-            zigzag_level_order.append(level[::direction])
-            direction *= (-1)
+            if level:
+                zigzag_level_order.append(level[::direction])
+                direction *= (-1)
 
         return zigzag_level_order

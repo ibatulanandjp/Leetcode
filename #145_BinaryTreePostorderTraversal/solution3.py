@@ -18,14 +18,3 @@ class Solution:
                 node = stack.pop()
                 root = node.left
         return res[::-1]
-    
-n1 = TreeNode(1)
-n2 = TreeNode(2)
-n3 = TreeNode(3)
-
-n1.right = n2
-n2.left = n3
-
-sol = Solution()
-res = sol.postorderTraversal(n1)
-print(res)

@@ -1,4 +1,4 @@
-from Typing import List
+from typing import List
 
 
 # Method: Sort, and then use 2 pointers for solving TwoSum problem

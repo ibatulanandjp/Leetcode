@@ -1,3 +1,6 @@
+# Method: Use first string to compare with all the other strings character-by-character
+# TC: O(nm), n = no of strings, m = string with minimum length
+# SC: O(m)
 from typing import List
 
 

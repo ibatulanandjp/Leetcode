@@ -1,3 +1,6 @@
+# Method: Hashmap of nodes
+# TC: O(1)
+# SC: O(n)
 from typing import Optional
 
 

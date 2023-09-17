@@ -1,5 +1,6 @@
 # Method: Use BFS with bitmask
-# 
+# TC: O(2^n * n), where n is the number of nodes. This is because there are 2^n possible subsets of nodes and n nodes to consider for each subset.
+# SC: O(2^n * n), needed for the visited set and the queue.
 from typing import List
 from collections import deque
 

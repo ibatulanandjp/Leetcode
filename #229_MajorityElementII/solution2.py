@@ -1,4 +1,4 @@
-# Method: Use Boyer-Moore Voting Algorithm to find the top 2 candidates, 
+# Method: Use Boyer-Moore Voting Algorithm to find the top 2 candidates,
 # and iterate over the list again to count the occurrence of these candidates to be greater than n/3
 # TC: O(n), where n is the length of list nums
 # SC: O(1)

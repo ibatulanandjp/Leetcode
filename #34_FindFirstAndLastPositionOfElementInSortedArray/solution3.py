@@ -12,7 +12,6 @@ class Solution:
         return [left, right]
 
     # leftBias: [True/False], if false, res is rightBiased
-
     def binarySearch(self, nums: List[int], target: int, leftBias: bool) -> int:
         l, r = 0, len(nums) - 1
         index = -1

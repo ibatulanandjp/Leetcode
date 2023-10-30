@@ -17,5 +17,5 @@ class Solution:
                 mask <<= 1
             return weight
 
-        arr.sort(key=lambda num: (find_weight(num), num))
+        arr.sort(key=lambda num: (find_weight(num), num)) # Sort again numerically if the num of bits are same
         return arr

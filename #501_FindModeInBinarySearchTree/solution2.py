@@ -1,6 +1,6 @@
 # Method: Use Inorder Traversal with 
 # TC: O(n)
-# SC: O(n)
+# SC: O(1), if the stack is ignored, else O(n) including stack
 
 # Definition for a binary tree node.
 class TreeNode:

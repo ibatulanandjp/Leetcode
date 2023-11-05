@@ -1,4 +1,4 @@
-# Method: Sort and merge intervals
+# Method: Sort by the first element in the interval and merge intervals
 # TC: O(n logn)
 # SC: O(n), for sorting
 from typing import List

@@ -1,3 +1,6 @@
+# Method: Sort and merge intervals
+# TC: O(n logn)
+# SC: O(n), for sorting
 from typing import List
 
 

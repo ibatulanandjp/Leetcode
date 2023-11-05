@@ -13,7 +13,7 @@ class Solution:
         for i in range(1, len(nums)):
             res[i] = res[i-1] * nums[i-1]
         
-        # Right to left
+        # Right to left (calculate res using a right value which updates to right*nums[i] at each index)
         right = 1
         for i in range(len(nums)-1, -1, -1):
             res[i] *= right

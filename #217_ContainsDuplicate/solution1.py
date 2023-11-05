@@ -1,3 +1,6 @@
+# Method: Sort the nums, and compare adjacent nums
+# TC: O(n)
+# SC: O(1)
 from typing import List
 
 class Solution:
@@ -7,6 +10,3 @@ class Solution:
             if(nums[i] == nums[i+1]):
                 return True
         return False
-
-sol = Solution()
-print(sol.containsDuplicate([1,3,1,2]))

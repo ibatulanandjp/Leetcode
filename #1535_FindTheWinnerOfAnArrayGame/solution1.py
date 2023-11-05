@@ -1,4 +1,6 @@
 # Method: Return max for k greater then arr length, and simulate for the other cases
+# Element which loses, will never participate in the game again anyways, since it will be smaller than the max. 
+# So ignoring them should be okay.
 # TC: O(n)
 # SC: O(1)
 from typing import List

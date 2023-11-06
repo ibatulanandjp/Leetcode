@@ -8,7 +8,7 @@ from typing import List
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         s = 0
-        # Calculte XOR with all the nums elements
+        # Calculate XOR with all the nums elements
         for i in range(len(nums)):
             s ^= nums[i]
         # Then, Calculate XOR with all the numbers within the length

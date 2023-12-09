@@ -1,3 +1,6 @@
+# Method: Use Stack to implement l-R-r for inorder traversal
+# TC: O(n)
+# SC: O(n)
 from typing import List, Optional
 
 # Definition for a binary tree node.

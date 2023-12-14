@@ -1,4 +1,6 @@
-1160.
+1160. Find Words That Can Be Formed by Characters
+
+[Easy]
 
 You are given an array of strings words and a string chars.
 

@@ -1,3 +1,6 @@
+# Method: Reverse and transpose
+# TC: O(n^2)
+# SC: O(1)
 from typing import List
 
 

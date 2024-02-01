@@ -1,6 +1,6 @@
 // Method: Sort the array and check for condition within 3 elements at a time
-// TC: O(n)
-// SC: O(n)
+// TC: O(n logn), for sorting
+// SC: O(log n), used in sorting (Java's Arrays.sort uses Quicksort)
 class Solution {
     public int[][] divideArray(int[] nums, int k) {
         Arrays.sort(nums);

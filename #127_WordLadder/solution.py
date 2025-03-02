@@ -1,6 +1,6 @@
 # Method: BFS: Create wordList set and create all charset; then queue the beginWord and check each word by replacing 1 char at a time, if it exist in wordList
-# TC: O(m*n + 26*n) = O(m*n), where m=Length of longest word, n=No. of words in the list
-# SC: O(m)
+# TC: O(m * n + 26 * n) = O(m * n), where m = Length of longest word, n = No. of words in the list
+# SC: O(m * n)
 from collections import deque
 
 

@@ -4,6 +4,7 @@ from collections import defaultdict
 # Method:
 # Use HashMap to store the <count[]:s> as key:value 
 # TC: O(m * n) -> m for list of strings, and n for each characters (max) in the string
+# SC: O(m * n) -> m for list of strings, and n for each characters (max) in the string
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         # defaultdict to avoid keyerror edge case (automatically handled, if a new key:value pair is added)

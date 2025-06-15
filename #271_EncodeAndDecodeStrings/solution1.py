@@ -1,8 +1,8 @@
 
 # Method:
 # Use - len(str) + '#' + str - for encoding
-# TC: O(n)
-# SC: O(n)
+# TC: O(m), where m is the sum of the lengths of all strings
+# SC: O(m + n), where m is the sum of the lengths of all strings and n is the number of strings
 from typing import List
 
 

@@ -7,6 +7,9 @@ from typing import List
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = {}
+
+        #  Create a list of lists for frequency, where index is the count
+        # It will have a length of len(nums) + 1, since count can be from 0 to len(nums)
         freq = [[] for _ in range(len(nums) + 1)]
 
         # Create hashmap with existing count+1, else 0 as default value 

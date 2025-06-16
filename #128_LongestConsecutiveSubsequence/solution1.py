@@ -3,7 +3,7 @@
 # and if it is the first number, start counting the length of the sequence
 # Keep track of the longest sequence found
 # TC: O(n), where n is the number of elements in nums
-# SC: O(1)
+# SC: O(n), for the HashSet
 from typing import List
 
 class Solution:

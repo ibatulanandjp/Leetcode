@@ -1,5 +1,5 @@
 # Method: Use Sliding Window and HashMap to count character frequencies
-# Maintain the maximum frequeency of characters in the current window
+# Maintain the maximum frequency of characters in the current window
 # TC: O(n), where n is the length of the string
 # SC: O(1), since the character set is limited to uppercase English letters
 class Solution:

@@ -1,3 +1,6 @@
+# Method: DFS Recursion - with (root, depth) parameters
+# TC: O(n), where n is the number of nodes in the tree
+# SC: O(h), where h is the height of the tree (due to recursion stack)
 from typing import Optional
 
 

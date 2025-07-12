@@ -1,3 +1,6 @@
+# Method: Use sorting to find the median
+# TC: O(n logn) for addNum, O(n logn) for findMedian
+# SC: O(n) for storing the numbers
 class MedianFinder:
 
     def __init__(self):

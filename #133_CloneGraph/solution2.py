@@ -1,4 +1,4 @@
-# Method: Use BFS to clone the graph
+# Method: Use DFS to clone the graph, using a hashmap <original: cloned> to keep track of cloned nodes.
 # Time Complexity: O(V + E), where V is the number of vertices and E is the number of edges.
 # Space Complexity: O(V), for the hashmap storing the cloned nodes.
 from collections import deque

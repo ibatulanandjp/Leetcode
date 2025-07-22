@@ -1,3 +1,6 @@
+# Method: Dynamic Programming (space optimized) to check only last 2 steps
+# TC: O(n), where n is the number of steps
+# SC: O(1), only constant space is used
 class Solution:
     def climbStairs(self, n: int) -> int:
         res = 1
